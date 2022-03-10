@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
 import React, { useEffect } from "react"
 import { SafeAreaView, StatusBar, StyleSheet } from "react-native"
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps"
-import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions" // 👈
+import { check, request, PERMISSIONS, RESULTS } from "react-native-permissions"
 
 const App = () => {
-  const handleLocationPermission = async () => { // 👈
+  const handleLocationPermission = async () => {
     let permissionCheck = '';
     if (Platform.OS === 'ios') {
       permissionCheck = await check(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
@@ -133,7 +133,7 @@ const App = () => {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-        showsUserLocation={true} //
+        showsUserLocation={true}
       />
     </SafeAreaView>
   )

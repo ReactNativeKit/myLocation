@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Button} from 'react-native';
 import {Permission, PERMISSION_TYPE} from './src/AppPermission';
 import MapView, {Polyline, Marker} from "react-native-maps";
 import MapViewDirections from 'react-native-maps-directions';
@@ -27,9 +27,11 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
+        
         <MapView
         style={styles.map}
         initialRegion={dwarkaSec14}
+        
         >
        <MapViewDirections
           origin={dwarkaSec14}
@@ -54,7 +56,7 @@ export default class App extends Component {
     }} // VEGAS Mall Coordinates
   />
         </MapView>
-
+      
 </View>
     
     )
